@@ -1,0 +1,109 @@
+/* Pulsing animation for photo container */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.photo-container {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Color cycling animation for request message */
+@keyframes colorCycle {
+    0% {
+        color: var(--acid-green-1);
+    }
+    33% {
+        color: var(--acid-yellow-1);
+    }
+    66% {
+        color: var(--acid-yellow-3);
+    }
+    100% {
+        color: var(--acid-green-1);
+    }
+}
+
+.request-message.animated {
+    animation: colorCycle 2s ease-in-out infinite;
+}
+
+/* Wobble animation for request message */
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.request-message.wobble {
+    animation: wobble 0.5s ease-in-out;
+}
+
+/* Molecule rotation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.molecule-left,
+.molecule-right {
+    animation: rotate 20s linear infinite;
+}
+
+/* Bubble animation */
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(var(--bubble-drift));
+        opacity: 0;
+    }
+}
+
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, 
+                rgba(46, 204, 113, 0.6), 
+                rgba(46, 204, 113, 0.2));
+    filter: blur(2px);
+    animation: bubbleRise var(--duration) ease-in infinite;
+    animation-delay: var(--delay);
+}
+
+/* Spin animation for molecules on click */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.molecule-spin {
+    animation: spin 1s ease-out;
+}

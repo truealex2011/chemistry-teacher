@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поздравление Евгению Геннадьевичу</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Background decorative elements -->
+    <div class="background-container">
+        <div class="bubbles-container"></div>
+    </div>
+
+    <!-- Main content -->
+    <main class="content-wrapper">
+        <!-- Header with formulas -->
+        <header class="chemical-header">
+            <span class="formula">H₂SO₄</span>
+            <span class="formula">HCl</span>
+            <span class="formula">HNO₃</span>
+            <span class="formula">CH₃COOH</span>
+        </header>
+
+        <!-- Photo container -->
+        <section class="photo-section">
+            <div class="photo-container" id="teacherPhoto">
+                <img src="assets/images/teacher-photo.jpg" alt="Евгений Геннадьевич" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                <div class="placeholder-text">Место для фото<br>Евгения Геннадьевича</div>
+            </div>
+        </section>
+
+        <!-- Congratulation text -->
+        <section class="congratulation-section">
+            <div class="molecule-left">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="20" r="8" fill="#60a5fa" opacity="0.9"/>
+                    <circle cx="30" cy="40" r="8" fill="#60a5fa" opacity="0.9"/>
+                    <circle cx="70" cy="40" r="8" fill="#60a5fa" opacity="0.9"/>
+                    <circle cx="30" cy="70" r="8" fill="#60a5fa" opacity="0.9"/>
+                    <circle cx="70" cy="70" r="8" fill="#60a5fa" opacity="0.9"/>
+                    <circle cx="50" cy="90" r="8" fill="#60a5fa" opacity="0.9"/>
+                    <line x1="50" y1="20" x2="30" y2="40" stroke="#3b82f6" stroke-width="2.5"/>
+                    <line x1="50" y1="20" x2="70" y2="40" stroke="#3b82f6" stroke-width="2.5"/>
+                    <line x1="30" y1="40" x2="30" y2="70" stroke="#3b82f6" stroke-width="2.5"/>
+                    <line x1="70" y1="40" x2="70" y2="70" stroke="#3b82f6" stroke-width="2.5"/>
+                    <line x1="30" y1="70" x2="50" y2="90" stroke="#3b82f6" stroke-width="2.5"/>
+                    <line x1="70" y1="70" x2="50" y2="90" stroke="#3b82f6" stroke-width="2.5"/>
+                </svg>
+            </div>
+            <div class="congratulation-text">
+                <p>Дорогой Евгений Геннадьевич!</p>
+                <p>Этот сайт создан специально для Вас — нашего любимого учителя химии!</p>
+                <p>Спасибо за увлекательные уроки, за терпение и знания, которые Вы нам передаете.</p>
+                <p>Вы — учитель с большой буквы, всегда готовый помочь и войти в положение каждого ученика.</p>
+                <p>Ваша доброта и преданность делают науку о кислотах и реакциях по-настоящему интересной!</p>
+                <p>Спасибо, что Вы всегда рядом и готовы на всё ради своих учеников!</p>
+            </div>
+            <div class="molecule-right">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="20" r="8" fill="#a78bfa" opacity="0.9"/>
+                    <circle cx="30" cy="40" r="8" fill="#a78bfa" opacity="0.9"/>
+                    <circle cx="70" cy="40" r="8" fill="#a78bfa" opacity="0.9"/>
+                    <circle cx="30" cy="70" r="8" fill="#a78bfa" opacity="0.9"/>
+                    <circle cx="70" cy="70" r="8" fill="#a78bfa" opacity="0.9"/>
+                    <circle cx="50" cy="90" r="8" fill="#a78bfa" opacity="0.9"/>
+                    <line x1="50" y1="20" x2="30" y2="40" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <line x1="50" y1="20" x2="70" y2="40" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <line x1="30" y1="40" x2="30" y2="70" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <line x1="70" y1="40" x2="70" y2="70" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <line x1="30" y1="70" x2="50" y2="90" stroke="#8b5cf6" stroke-width="2.5"/>
+                    <line x1="70" y1="70" x2="50" y2="90" stroke="#8b5cf6" stroke-width="2.5"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Animated request message -->
+        <section class="request-section">
+            <div class="request-message" id="requestMessage"></div>
+        </section>
+
+        <!-- Interactive chemical elements -->
+        <section class="chemical-elements">
+            <div class="element-card acid-card" data-element="HCl">
+                <div class="element-symbol">HCl</div>
+                <div class="element-name">Соляная кислота</div>
+            </div>
+            <div class="element-card acid-card" data-element="H2SO4">
+                <div class="element-symbol">H₂SO₄</div>
+                <div class="element-name">Серная кислота</div>
+            </div>
+            <div class="element-card acid-card" data-element="HNO3">
+                <div class="element-symbol">HNO₃</div>
+                <div class="element-name">Азотная кислота</div>
+            </div>
+            <div class="element-card acid-card" data-element="H3PO4">
+                <div class="element-symbol">H₃PO₄</div>
+                <div class="element-name">Фосфорная кислота</div>
+            </div>
+            <div class="element-card acid-card" data-element="CH3COOH">
+                <div class="element-symbol">CH₃COOH</div>
+                <div class="element-name">Уксусная кислота</div>
+            </div>
+        </section>
+
+        <!-- Author signature -->
+        <footer class="author-section">
+            <p class="author-signature">Старался Бакланов Алексей 8Ю</p>
+        </footer>
+    </main>
+
+    <noscript>
+        <style>
+            .request-message::after {
+                content: 'Поставьте 5 по химии за Кислоты Пожааааааааалуста!';
+            }
+            .bubbles-container {
+                display: none;
+            }
+        </style>
+    </noscript>
+
+    <script src="js/bubbles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/interactions.js"></script>
+</body>
+</html>

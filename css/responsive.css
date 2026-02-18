@@ -1,0 +1,124 @@
+/* Tablet */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        padding: var(--spacing-medium);
+    }
+    
+    .congratulation-text p {
+        font-size: 20px;
+    }
+    
+    .request-message {
+        font-size: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    :root {
+        --photo-size: var(--photo-size-mobile);
+    }
+    
+    .photo-section {
+        position: static;
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--spacing-large);
+    }
+    
+    .photo-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .chemical-header {
+        flex-wrap: wrap;
+        gap: var(--spacing-small);
+        padding: 10px;
+    }
+    
+    .formula {
+        font-size: 24px;
+    }
+    
+    .congratulation-section {
+        flex-direction: column;
+    }
+    
+    .molecule-left,
+    .molecule-right {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .congratulation-text {
+        padding: var(--spacing-medium);
+    }
+    
+    .congratulation-text p {
+        font-size: 18px;
+    }
+    
+    .request-message {
+        font-size: 24px;
+    }
+    
+    .author-signature {
+        font-size: 16px;
+    }
+    
+    .chemical-elements {
+        gap: 10px;
+    }
+    
+    .element-card {
+        width: 80px;
+        height: 100px;
+    }
+    
+    .element-symbol {
+        font-size: 36px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: var(--spacing-small);
+    }
+    
+    .congratulation-text p {
+        font-size: 16px;
+    }
+    
+    .request-message {
+        font-size: 20px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .content-wrapper {
+        padding: 5px;
+    }
+    
+    .photo-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .congratulation-text p {
+        font-size: 14px;
+    }
+}
+
+/* Extra large devices */
+@media (min-width: 2560px) {
+    .content-wrapper {
+        max-width: 1600px;
+    }
+    
+    .congratulation-text p {
+        font-size: 28px;
+    }
+}
